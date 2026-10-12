@@ -131,7 +131,6 @@ PYTHONPATH='.' python ./plenoxels/main.py \
 | `--frozen_light` | Fix illumination, vary motion over time |
 | `--frozen_motion` | Fix motion, vary illumination over time |
 | `--render_wo_il` | Render without illumination field |
-| `--render_fig8` | Render a single test frame (motion at frame 32, illumination from 6 frames earlier) |
 | `--intensity_left/right/center/square/lr` | Apply a custom intensity map (requires `--intensity_map <path.pth>`, see below) |
 
 The intensity modes need an extra `--intensity_map` argument, which `render.sh` does not pass, so run them directly:
