@@ -1,0 +1,14 @@
+# Data and large binaries (distributed separately)
+dataset/
+/code/plenoxels/dataset
+*.pth
+*.pt
+*.mp4
+
+# Training outputs
+logs/
+events.out.tfevents.*
+
+# Python
+__pycache__/
+*.pyc
