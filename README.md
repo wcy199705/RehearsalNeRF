@@ -1,4 +1,4 @@
-# [IJCV 2026] RehearsalNeRF: Decoupling Intrinsic Neural Fields of Dynamic Illuminations for Scene Editing
+# [IJCV 2026] RehearsalNeRF
 
 Official implementation of **"RehearsalNeRF: Decoupling Intrinsic Neural Fields of Dynamic Illuminations for Scene Editing"** (IJCV 2026)
 
