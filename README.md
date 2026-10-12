@@ -131,9 +131,22 @@ PYTHONPATH='.' python ./plenoxels/main.py \
 | `--frozen_light` | Fix illumination, vary motion over time |
 | `--frozen_motion` | Fix motion, vary illumination over time |
 | `--render_wo_il` | Render without illumination field |
-| `--decomp_rendering_only` | Decomposed rendering visualization |
-| `--render_fig8` | Figure-8 camera path rendering |
-| `--intensity_left/right/center/square/lr` | Apply custom intensity maps (requires `--intensity_map <path.pth>`) |
+| `--render_fig8` | Render a single test frame (motion at frame 32, illumination from 6 frames earlier) |
+| `--intensity_left/right/center/square/lr` | Apply a custom intensity map (requires `--intensity_map <path.pth>`, see below) |
+
+The intensity modes need an extra `--intensity_map` argument, which `render.sh` does not pass, so run them directly:
+
+```bash
+cd code/plenoxels
+PYTHONPATH='.' python ./plenoxels/main.py \
+  --config-path ./plenoxels/configs/scenes/01.py \
+  --log-dir logs/KPOP/01 \
+  --model_name 120000model.pth \
+  --intensity_left \
+  --intensity_map <path/to/intensity_map.pth>
+```
+
+The intensity map is a float tensor of shape `[num_frames, H, W]` (`75 x 760 x 1352` for scene `01`) saved with `torch.save`; it scales the illumination intensity per pixel. The flag name (`left`, `right`, ...) only sets the output file name.
 
 ## Dataset Structure
 
