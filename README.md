@@ -96,7 +96,7 @@ PYTHONPATH='.' python ./plenoxels/main.py \
   --config-path ./plenoxels/configs/scenes/01.py
 ```
 
-With the default `batch_size=3072`, training uses about 19GB of GPU memory and runs at about 2.4 it/s on an RTX 3090 (24GB), i.e. roughly 14 hours for 120k steps.
+With the default `batch_size=3072`, training uses about 19GB of GPU memory on an RTX 3090 (24GB) and takes roughly 14 hours for 120k steps.
 
 Config parameters can be overridden from the command line. On GPUs with less memory, lower the batch size (`batch_size=2048` uses about 16GB):
 ```bash
