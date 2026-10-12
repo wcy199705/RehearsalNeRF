@@ -222,4 +222,4 @@ Our code is built upon [K-Planes](https://github.com/sarafridov/K-Planes). We th
 
 ## License
 
-This project follows the license of K-Planes and is released under the [BSD 3-Clause License](LICENSE_KPlane).
+This project follows the license of K-Planes and is released under the [BSD 3-Clause License](code/LICENSE_KPlane).
