@@ -128,7 +128,7 @@ PYTHONPATH='.' python ./plenoxels/main.py \
 | `--render-only` | Full scene rendering to video |
 | `--validate-only` | Compute validation metrics (PSNR, SSIM, MS-SSIM) |
 | `--hue_test` | Render with multiple hue variations |
-| `--intensity_left/right/center` | Apply an intensity map (requires `--intensity_map <path.pth>`, see below) |
+| `--intensity_left/right/center` | Apply an intensity map (Intensity Change in [Project Page](https://wcy199705.github.io/RehearsalNeRF/); requires `--intensity_map <path.pth>`, see below) |
 
 The intensity modes need an extra `--intensity_map` argument, which `render.sh` does not pass, so run them directly:
 
