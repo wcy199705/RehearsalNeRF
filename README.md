@@ -128,7 +128,7 @@ PYTHONPATH='.' python ./plenoxels/main.py \
 | `--render-only` | Full scene rendering to video |
 | `--validate-only` | Compute validation metrics (PSNR, SSIM, MS-SSIM) |
 | `--hue_test` | Render with multiple hue variations |
-| `--intensity_left/right/center/square/lr` | Apply a custom intensity map (requires `--intensity_map <path.pth>`, see below) |
+| `--intensity_left/right/center` | Apply an intensity map (requires `--intensity_map <path.pth>`, see below) |
 
 The intensity modes need an extra `--intensity_map` argument, which `render.sh` does not pass, so run them directly:
 
@@ -139,10 +139,10 @@ PYTHONPATH='.' python ./plenoxels/main.py \
   --log-dir logs/KPOP/01 \
   --model_name 120000model.pth \
   --intensity_left \
-  --intensity_map <path/to/intensity_map.pth>
+  --intensity_map ../left_intensity.pth
 ```
 
-The intensity map is a float tensor of shape `[num_frames, H, W]` (`75 x 760 x 1352` for scene `01`) saved with `torch.save`; it scales the illumination intensity per pixel. The flag name (`left`, `right`, ...) only sets the output file name.
+Example intensity maps for scene `01` are provided in `code/` (`left_intensity.pth`, `right_intensity.pth`, `center_intensity.pth`). An intensity map is a float tensor of shape `[num_frames, H, W]` (`75 x 760 x 1352` for scene `01`) saved with `torch.save`; it scales the illumination intensity per pixel. The flag name (`left`, `right`, `center`) only sets the output file name.
 
 ## Dataset Structure
 

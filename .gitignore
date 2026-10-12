@@ -3,6 +3,9 @@ dataset/
 /code/plenoxels/dataset
 *.pth
 *.pt
+!code/left_intensity.pth
+!code/right_intensity.pth
+!code/center_intensity.pth
 *.mp4
 
 # Training outputs
