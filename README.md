@@ -128,9 +128,6 @@ PYTHONPATH='.' python ./plenoxels/main.py \
 | `--render-only` | Full scene rendering to video |
 | `--validate-only` | Compute validation metrics (PSNR, SSIM, MS-SSIM) |
 | `--hue_test` | Render with multiple hue variations |
-| `--frozen_light` | Fix illumination, vary motion over time |
-| `--frozen_motion` | Fix motion, vary illumination over time |
-| `--render_wo_il` | Render without illumination field |
 | `--intensity_left/right/center/square/lr` | Apply a custom intensity map (requires `--intensity_map <path.pth>`, see below) |
 
 The intensity modes need an extra `--intensity_map` argument, which `render.sh` does not pass, so run them directly:
